@@ -1,0 +1,130 @@
+/* Login.module.css */
+
+.loginPageContainer { 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
+	height: 100vh; 
+}
+
+.loginContainer {
+    min-width: 1000px;
+    width: 80%;
+    height: 1000px;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px -4px #616061b6;
+    border: 1px solid var(--border);
+}
+
+.leftSideContainer {
+    background-color: rgba(255, 255, 255, 0.664);
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginText {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+}
+
+.usernameLogin {
+    height: 40px;
+    width: 350px;
+    margin: 8px;
+    border: none;
+    background-color: rgba(224, 224, 224, 0.815);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.passwordLogin {
+    height: 40px;
+    width: 350px;
+    margin: 8px;
+    border: none;
+    background-color: rgba(224, 224, 224, 0.815);
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.forgotPassword {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+}
+
+.forgotPassword:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.loginButton {
+    border-radius: 20px;
+    border: 1px solid rgba(29, 73, 155, 0.795);
+    background-color: rgba(29, 73, 155, 0.795);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.loginButton:hover {
+    cursor: pointer;
+}
+
+.rightSideContainer {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(29, 73, 155, 0.795);
+}
+
+.sloganRight {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: white;
+}
+
+.sloganRight2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+}
+
+.signupButton {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.795);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+
+.signupButton:hover {
+    border-radius: 20px;
+    border: 1px solid rgba(29, 73, 155, 0.795);
+    background-color: rgba(29, 73, 155, 0.795);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
