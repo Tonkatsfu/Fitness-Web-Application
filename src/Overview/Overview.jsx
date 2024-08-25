@@ -8,7 +8,7 @@ function Overview() {
         <div className={styles.mainContainer}>
             <div className={styles.leftContainer}>
                 <div className={styles.logo}>
-                    F i t T r a c k
+                    FitTrack
                 </div>
 
                 <div className={styles.profileSection}>
@@ -43,11 +43,25 @@ function Overview() {
 
             <div className={styles.rightContainer}>
                 <div className={styles.searchBar}>
-
+                    <input className={styles.searchBarBox} placeholder='Looking for something?'></input>
                 </div>
 
                 <div className={styles.rightSideContainer}>
-                    
+                    <div className={styles.createButton}>
+                        <p className={styles.createButtonText}>+ Create a Plan</p>
+                    </div>
+
+                    <div className={styles.socials}>
+                        <img src='src/assets/icons/facebook.png'></img>
+                        <img src='src/assets/icons/linkedIn.png'></img>
+                        <img src='src/assets/icons/instagram.png'></img>
+                    </div>
+
+                    <div className={styles.rightSideProfile}>
+                        <img src='src/assets/hannidp.jpg' alt="Profile" className={styles.profilePictureRight}/>
+                        <p className={styles.profileNameRight}>Hanni Pham</p>
+                        <img src='src/assets/icons/logout.png' alt="Logout" className={styles.logoutButton}/>
+                    </div>
                 </div>
             </div>
         </div>
