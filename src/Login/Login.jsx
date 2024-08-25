@@ -19,7 +19,7 @@ function Login(){
         <div className={styles.loginPageContainer}>  
             <div className={styles.loginContainer}>  
                 <div className={styles.leftSideContainer}>
-                    <p className={styles.loginText}>Welcome!</p>
+                    <p className={styles.loginText}>FitTrack</p>
 
                     <input 
                         className={styles.usernameLogin} 
