@@ -302,3 +302,50 @@ svg{
     margin: 30px;
     border-radius: 10px;
 }
+
+.otherMacrosBar{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.otherMacroName{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    margin: 20px ;
+}
+
+.otherMacroBarContainer, .otherMacroBarContainer1, .otherMacroBarContainer2{
+    height: 14px;
+    background-color: #2f333f85;
+    border-radius: 3px;
+    margin: 20px;
+}
+
+.otherMacroBarContainerPer{
+    width: 90%;
+    height: 14px;
+    background-color: rgb(216, 151, 66);
+    border-radius: 3px;
+    position: relative;
+}
+
+.otherMacroBarContainerPer1{
+    width: 70%;
+    height: 14px;
+    background-color: rgb(10, 136, 17);
+    border-radius: 3px;
+    position: relative;
+}
+
+.otherMacroBarContainerPer2{
+    width: 30%;
+    height: 14px;
+    background-color: rgb(24, 91, 214);
+    border-radius: 3px;
+    position: relative;
+}
+

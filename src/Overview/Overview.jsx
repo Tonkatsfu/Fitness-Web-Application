@@ -114,6 +114,29 @@ function Overview() {
                                 />
                             </svg>
                         </div>
+
+                        <div className={styles.otherMacrosBar}>
+                            <div className={styles.otherMacroBar}>
+                                    <div className={styles.otherMacroName}>Protein</div>
+                                    <div className={styles.otherMacroBarContainer}>
+                                        <div className={styles.otherMacroBarContainerPer}></div>
+                                    </div>
+                            </div>
+
+                            <div className={styles.otherMacroBar}>
+                                    <div className={styles.otherMacroName}>Carbohydrates</div>
+                                    <div className={styles.otherMacroBarContainer1}>
+                                        <div className={styles.otherMacroBarContainerPer1}></div>
+                                    </div>
+                            </div>
+
+                            <div className={styles.otherMacroBar}>
+                                    <div className={styles.otherMacroName}>Fats</div>
+                                    <div className={styles.otherMacroBarContainer2}>
+                                        <div className={styles.otherMacroBarContainerPer2}></div>
+                                    </div>
+                            </div>
+                        </div>
                     </div>
 
                     <div className={styles.weeklyPlannerDashboard}>
