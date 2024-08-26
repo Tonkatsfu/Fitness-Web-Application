@@ -206,174 +206,96 @@ html, body {
     cursor: pointer;
 }
 
-.dashboardContainer {
-    width: 100%;
-    height: 100%; 
+.weeklyPlannerContainer {
     display: flex;
     flex-direction: row;
-}
-
-.macrosDashboard{
-    width: 40%;
-    height: 500px;
-    background-color: #191c24;
-    margin: 30px;
-    margin-right: 0px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.macrosTitle{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 2em;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-}
-
-.macrosBar{
-    width: 160px;
-    height: 160px;
-    position: relative;
-}
-
-.outer {
-    height: 140px; 
-    width: 140px;  
-    border-radius: 50%;
-    padding: 10px;  
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.3), 
-                -6px -6px 10px -1px rgba(0, 0, 0, 0.3); /* Adjusted shadow to fit smaller size */
-}
-
-.inner {
-    height: 100px;
-    width: 100px;  
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
-                inset -4px -4px 6px -1px rgba(0, 0, 0, 0.5), /* Adjusted shadow to fit smaller size */
-                -0.5px -0.5px 0px rgba(0, 0, 0, 0.7), /* Adjusted outer white shadow */
-                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
-                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-}
-
-circle{
-    fill: none;
-    stroke: rgb(0, 162, 255);
-    stroke-width: 20px;
-    stroke-dasharray: 472;
-    stroke-dashoffset: 472;
-    animation: anim 2s linear forwards;
-}
-
-svg{
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.calorieCountDashboard{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-}
-
-@keyframes anim{
-    100%{
-        stroke-dashoffset: 221;
-    }
-}
-
-.otherMacrosBar{
-    width: 100%;
-    max-width: 600px;
-    padding: 0 20px;
-}
-
-.otherMacroName{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1em;
-    font-weight: bolder;
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    margin: 20px ;
-}
-
-.otherMacroBarContainer, .otherMacroBarContainer1, .otherMacroBarContainer2{
-    height: 14px;
-    background-color: #2f333f85;
-    border-radius: 3px;
     margin: 20px;
 }
 
-@keyframes widthAnim {
-    from {
-        width: 0;
-    }
-    to {
-        width: 90%; 
-    }
+.weeklyPlannerContainerBox {
+    flex: 1; 
+    background-color: #191c24;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
-@keyframes widthAnim1 {
-    from {
-        width: 0;
-    }
-    to {
-        width: 70%; 
-    }
+.workoutType{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 20px;
 }
 
-@keyframes widthAnim2 {
-    from {
-        width: 0;
-    }
-    to {
-        width: 30%; 
-    }
+.upperDay, .lowerDay, .pushDay, .pullDay, .legsDay {
+    width: 200px;
+    height: 50px;
+    background-color: #191c24;
+    border: 1px solid #2c2e33;
+    border-radius: 50px;
+    display: flex;           
+    justify-content: center; 
+    align-items: center;    
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: lighter;
+    color: rgba(255, 255, 255, 0.548);
 }
 
-.otherMacroBarContainerPer {
-    width: 0; 
-    height: 14px;
-    background-color: rgb(216, 151, 66);
-    border-radius: 3px;
-    position: relative;
-    animation: widthAnim 2s forwards; 
+.upperDay:hover, .lowerDay:hover, .pushDay:hover, .pullDay:hover, .legsDay:hover {
+    background-color: black;
+    cursor: pointer;
 }
 
-.otherMacroBarContainerPer1 {
-    width: 0; 
-    height: 14px;
-    background-color: rgb(10, 136, 17);
-    border-radius: 3px;
-    position: relative;
-    animation: widthAnim1 2s forwards;
-    animation-delay: 0.5s;
+.addExerciseButton{
+    width: 200px;
+    border-radius: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin: 20px auto;
 }
 
-.otherMacroBarContainerPer2 {
-    width: 0;
-    height: 14px;
-    background-color: rgb(24, 91, 214);
-    border-radius: 3px;
-    position: relative;
-    animation: widthAnim2 2s forwards;
-    animation-delay: 1s; 
+.exerciseInputs {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    justify-content: space-between;
 }
 
-.weeklyPlannerDashboard{
-    width: 60%;
-    height: 500px;
+.exerciseInputs input {
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid #2c2e33;
+    border-radius: 10px;
+    background:#191c24;
+    color: white;
+}
+
+.exerciseInputs button {
+    width: 200px;
+    background-color: #00d25b;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.exerciseInputs button:hover {
+    background-color: #00d25ba4;
+}
+
+.exerciseList{
+    width: 30%;
+    height: 100%;   
+    display: flex;
+    flex-direction: column;
+}
+
+.exerciseListBox{
+    flex: 1;
     background-color: #191c24;
     margin: 30px;
     border-radius: 10px;
@@ -381,9 +303,13 @@ svg{
     flex-direction: column;
 }
 
-
-
-
+.exerciseHeader{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+}
 
 
 

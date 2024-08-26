@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './Overview.module.css';
 
 function Overview() {
     const [activeItem, setActiveItem] = useState('Dashboard');
     const [calories, setCalories] = useState(0);
+    const [workouts, setWorkouts] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         let calorieGoal = 800;
@@ -51,7 +54,10 @@ function Overview() {
                     </div>
                     <div 
                         className={`${styles.navItem} ${activeItem === 'Weekly Planner' ? styles.active : ''}`}
-                        onClick={() => setActiveItem('Weekly Planner')}
+                        onClick={() => {
+                            setActiveItem('Weekly Planner');
+                            navigate('/weeklyplanner');
+                        }}
                     >
                         <img src='src/assets/icons/weeklyPlanner.png' alt="WeeklyPlanner" className={styles.dashboard} />
                         <p className={styles.dashboardTitle}>Weekly Planner</p>
@@ -74,8 +80,8 @@ function Overview() {
                         </div>
 
                         <div className={styles.socials}>
-                            <img src='src/assets/icons/facebook.png' alt="Facebook" />
-                            <img src='src/assets/icons/linkedIn.png' alt="LinkedIn" />
+                            <img src='src/assets/icons/facebook.png' alt="Facebook" className={styles.facebook}/>
+                            <img src='src/assets/icons/linkedIn.png' alt="LinkedIn" className={styles.linkedin}/>
                             <img src='src/assets/icons/instagram.png' alt="Instagram" />
                         </div>
 
@@ -140,7 +146,7 @@ function Overview() {
                     </div>
 
                     <div className={styles.weeklyPlannerDashboard}>
-
+                        
                     </div>
                 </div>
             </div>
