@@ -1,8 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Overview.module.css';
 
 function Overview() {
     const [activeItem, setActiveItem] = useState('Dashboard');
+    const [calories, setCalories] = useState(0);
+
+    useEffect(() => {
+        let calorieGoal = 800;
+        let increment = 8;
+        let currentCalories = 0;
+
+        const interval = setInterval(() => {
+            currentCalories += increment;
+            if (currentCalories >= calorieGoal) {
+                currentCalories = calorieGoal;
+                clearInterval(interval);
+            }
+            setCalories(currentCalories);
+        }, 20); 
+
+        return () => clearInterval(interval); 
+    }, []);
 
     return (
         <div className={styles.mainContainer}>
@@ -12,7 +30,7 @@ function Overview() {
                 </div>
 
                 <div className={styles.profileSection}>
-                    <img src='src/assets/hannidp.jpg' alt="Profile" className={styles.profilePicture}/>
+                    <img src='src/assets/hannidp.jpg' alt="Profile" className={styles.profilePicture} />
                     <p className={styles.profileName}>Hanni Pham</p>
                 </div>
 
@@ -41,26 +59,65 @@ function Overview() {
                 </div>
             </div>
 
-            <div className={styles.rightContainer}>
-                <div className={styles.searchBar}>
-                    <input className={styles.searchBarBox} placeholder='Looking for something?'></input>
+            <div className={styles.rightWrapper}>
+                <div className={styles.rightContainer}>
+                    <div className={styles.searchBar}>
+                        <input 
+                            className={styles.searchBarBox} 
+                            placeholder='Looking for something?'>
+                        </input>
+                    </div>
+
+                    <div className={styles.rightSideContainer}>
+                        <div className={styles.createButton}>
+                            <p className={styles.createButtonText}>+ Create a Plan</p>
+                        </div>
+
+                        <div className={styles.socials}>
+                            <img src='src/assets/icons/facebook.png' alt="Facebook" />
+                            <img src='src/assets/icons/linkedIn.png' alt="LinkedIn" />
+                            <img src='src/assets/icons/instagram.png' alt="Instagram" />
+                        </div>
+
+                        <div className={styles.rightSideProfile}>
+                            <img src='src/assets/hannidp.jpg' alt="Profile" className={styles.profilePictureRight} />
+                            <p className={styles.profileNameRight}>Hanni Pham</p>
+                            <img src='src/assets/icons/logout.png' alt="Logout" className={styles.logoutButton} />
+                        </div>
+                    </div>
                 </div>
 
-                <div className={styles.rightSideContainer}>
-                    <div className={styles.createButton}>
-                        <p className={styles.createButtonText}>+ Create a Plan</p>
+                <div className={styles.dashboardContainer}>
+                    <div className={styles.macrosDashboard}>
+                        <p className={styles.macrosTitle}>Calories</p>
+                        <div className={styles.macrosBar}>
+                            <div className={styles.outer}>
+                                <div className={styles.inner}>
+                                    <div className={styles.calorieCountDashboard}>
+                                        {calories} Left
+                                    </div>
+                                </div>
+                            </div>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="160px" height="160px">
+                                <defs>
+                                    <linearGradient id="GradientColor">
+                                        <stop offset="0%" stop-color="#e91e63" />
+                                        <stop offset="100%" stop-color="#673ab7" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="80" cy="80" r="70" stroke-linecap="round" 
+                                    style={{ 
+                                        strokeDasharray: 472, 
+                                        strokeDashoffset: 472 * (1 - calories / 800) 
+                                    }}
+                                />
+                            </svg>
+                        </div>
                     </div>
 
-                    <div className={styles.socials}>
-                        <img src='src/assets/icons/facebook.png'></img>
-                        <img src='src/assets/icons/linkedIn.png'></img>
-                        <img src='src/assets/icons/instagram.png'></img>
-                    </div>
+                    <div className={styles.weeklyPlannerDashboard}>
 
-                    <div className={styles.rightSideProfile}>
-                        <img src='src/assets/hannidp.jpg' alt="Profile" className={styles.profilePictureRight}/>
-                        <p className={styles.profileNameRight}>Hanni Pham</p>
-                        <img src='src/assets/icons/logout.png' alt="Logout" className={styles.logoutButton}/>
                     </div>
                 </div>
             </div>

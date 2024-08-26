@@ -6,6 +6,7 @@ html, body {
 
 .mainContainer {
     display: flex;
+    flex-direction: row; 
 }
 
 .leftContainer {
@@ -65,7 +66,7 @@ html, body {
 }
 
 .navItem:hover, .active {
-    border-radius: 0px 100px 100px 0px; 
+    border-radius: 50px; 
     background-color: black;
     cursor: pointer;
 }
@@ -85,6 +86,12 @@ html, body {
     color: rgba(255, 255, 255, 0.548);
 }
 
+.rightWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+}
+
 .rightContainer {
     background-color: #191c24;
     display: flex;
@@ -92,7 +99,8 @@ html, body {
     width: 100%;
     height: 70px;
 }
-.searchBar{
+
+.searchBar {
     width: 50%;
     display: flex;
     align-items: center;
@@ -115,14 +123,14 @@ html, body {
     border-color: #2c2e33; 
 }
 
-.rightSideContainer{
+.rightSideContainer {
     width: 50%;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.createButton{
+.createButton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,22 +140,23 @@ html, body {
     background: #00d25b;
     border-color: #00d25b;
     border-radius: 5px;
+    margin-left: auto;
 }
 
-.createButtonText{
+.createButtonText {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
 }
 
-.createButton:hover{
+.createButton:hover {
     background: #00d25ba4;
     cursor: pointer;
 }
 
-.socials{
+.socials {
     display: flex;
     flex-direction: row;
-    margin-left: 20px;
+    margin-left: auto;
 }
 
 .socials img {
@@ -189,7 +198,7 @@ html, body {
     margin-right: 10px; 
 }
 
-.profileNameRight:hover{
+.profileNameRight:hover {
     cursor: pointer;
 }
 
@@ -199,11 +208,97 @@ html, body {
     cursor: pointer;
 }
 
+.dashboardContainer {
+    width: 100%;
+    height: 100%; 
+    display: flex;
+    flex-direction: row;
+}
 
+.macrosDashboard{
+    width: 40%;
+    height: 500px;
+    background-color: #191c24;
+    margin: 30px;
+    margin-right: 0px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 
+.macrosTitle{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
 
+.macrosBar{
+    width: 160px;
+    height: 160px;
+    position: relative;
+}
 
+.outer {
+    height: 140px; 
+    width: 140px;  
+    border-radius: 50%;
+    padding: 10px;  
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.3), 
+                -6px -6px 10px -1px rgba(0, 0, 0, 0.3); /* Adjusted shadow to fit smaller size */
+}
 
+.inner {
+    height: 100px;
+    width: 100px;  
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+                inset -4px -4px 6px -1px rgba(0, 0, 0, 0.5), /* Adjusted shadow to fit smaller size */
+                -0.5px -0.5px 0px rgba(0, 0, 0, 0.7), /* Adjusted outer white shadow */
+                0.5px 0.5px 0px rgba(0, 0, 0, 0.15),
+                0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
 
+circle{
+    fill: none;
+    stroke: rgb(0, 162, 255);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 472;
+    animation: anim 2s linear forwards;
+}
 
+svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
+.calorieCountDashboard{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+}
+
+@keyframes anim{
+    100%{
+        stroke-dashoffset: 221;
+    }
+}
+
+.weeklyPlannerDashboard{
+    width: 60%;
+    height: 500px;
+    background-color: #191c24;
+    margin: 30px;
+    border-radius: 10px;
+}
