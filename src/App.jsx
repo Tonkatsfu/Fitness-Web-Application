@@ -8,7 +8,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/overview" element={<Overview />} />
         <Route path="*" element={<Navigate to="/" />} />
         <Route path="/weeklyplanner" element={<WeeklyPlanner />} />

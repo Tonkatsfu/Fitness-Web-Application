@@ -5,7 +5,6 @@ import styles from './Overview.module.css';
 function Overview() {
     const [activeItem, setActiveItem] = useState('Dashboard');
     const [calories, setCalories] = useState(0);
-    const [workouts, setWorkouts] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -53,9 +52,9 @@ function Overview() {
                         <p className={styles.dashboardTitle}>Macros</p>
                     </div>
                     <div 
-                        className={`${styles.navItem} ${activeItem === 'Weekly Planner' ? styles.active : ''}`}
+                        className={`${styles.navItem} ${activeItem === 'WeeklyPlanner' ? styles.active : ''}`}
                         onClick={() => {
-                            setActiveItem('Weekly Planner');
+                            setActiveItem('WeeklyPlanner');
                             navigate('/weeklyplanner');
                         }}
                     >

@@ -86,6 +86,8 @@ html, body {
     color: rgba(255, 255, 255, 0.548);
 }
 
+
+
 .rightWrapper {
     display: flex;
     flex-direction: column;
@@ -117,10 +119,6 @@ html, body {
     color: rgba(255, 255, 255, 0.548);
     outline: none; 
     border-radius: 50px;
-}
-
-.searchBarBox:focus {
-    border-color: #2c2e33; 
 }
 
 .rightSideContainer {
@@ -206,110 +204,194 @@ html, body {
     cursor: pointer;
 }
 
-.weeklyPlannerContainer {
+.weeklyPlannerToolbox {
     display: flex;
     flex-direction: row;
-    margin: 20px;
 }
 
-.weeklyPlannerContainerBox {
-    flex: 1; 
+.weeklyPlannerToolboxBox {
+    width: 350px;
+    height: 240px;
     background-color: #191c24;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-}
-
-.workoutType{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     margin: 20px;
 }
 
-.upperDay, .lowerDay, .pushDay, .pullDay, .legsDay {
-    width: 200px;
-    height: 50px;
-    background-color: #191c24;
-    border: 1px solid #2c2e33;
-    border-radius: 50px;
-    display: flex;           
-    justify-content: center; 
-    align-items: center;    
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: lighter;
-    color: rgba(255, 255, 255, 0.548);
+.tools{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.upperDay:hover, .lowerDay:hover, .pushDay:hover, .pullDay:hover, .legsDay:hover {
+.dayTypeContainer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.dayTypeImg{
+    width: 40px;
+    height: 40px;
+}
+
+.dayTypeText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.473);
+    margin: 10px;
+    text-align: center;
+}
+
+.dayTypeText:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.addWorkoutContainer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.addWorkoutImg{
+    width: 40px;
+    height: 40px;
+}
+
+.addWorkoutText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.473);
+    margin: 10px;
+}
+
+.addWorkoutText:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.repsSetsContainer{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.repsAndSetsImg{
+    width: 40px;
+    height: 40px;
+}
+
+.repsAndSetsText{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8em;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.473);
+    margin: 10px;
+}
+
+.repsAndSetsText:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.activeToolbox{
     background-color: black;
-    cursor: pointer;
-}
-
-.addExerciseButton{
-    width: 200px;
-    border-radius: 20px;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: normal;
-    margin: 20px auto;
-}
-
-.exerciseInputs {
-    display: flex;
-    flex-direction: row;
-    margin: 20px;
-    justify-content: space-between;
-}
-
-.exerciseInputs input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #2c2e33;
-    border-radius: 10px;
-    background:#191c24;
     color: white;
 }
 
-.exerciseInputs button {
-    width: 200px;
-    background-color: #00d25b;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.exerciseInputs button:hover {
-    background-color: #00d25ba4;
-}
 
 .exerciseList{
-    width: 30%;
+    width: 100%;
     height: 100%;   
-    display: flex;
-    flex-direction: column;
 }
 
 .exerciseListBox{
-    flex: 1;
+    width: 150px;
+    height: 500px;
+    margin: 20px;
     background-color: #191c24;
-    margin: 30px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.exerciseHeader{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
-    font-weight: bolder;
-    color: white;
-    text-align: center;
+.dayTypeButtons{
+    display: flex;
+    flex-direction: column;
 }
+
+.upperDay, .lowerDay, .pushDay, .pullDay, .legDay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 30px;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: white;
+    border: 2px solid #000000;
+    background-color: black;
+    border-radius: 10px;
+    padding: 13px 20px 11px 20px;
+    margin: 10px;
+}
+
+.upperDay:hover, .lowerDay:hover, .pushDay:hover, .pullDay:hover, .legDay:hover{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
+.dayTypeNext{
+    background-color: rgba(85, 83, 83, 0.11);
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nextButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 70px;
+    height: 30px;
+    background: #00d25b;
+    border-color: #00d25b;
+    border-radius: 10px;
+    color: white;
+    font-size: 1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.nextButton:hover{
+    background: #00d25b85;
+    cursor: pointer;
+}
+
 
 
 
