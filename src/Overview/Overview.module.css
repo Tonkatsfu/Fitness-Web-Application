@@ -69,10 +69,12 @@ html, body {
     border-radius: 50px; 
     background-color: black;
     cursor: pointer;
+    transition: background-color 1s ease;
 }
 
 .navItem p:hover, .active p {
     color: white;
+    transition: color 1s ease;
 }
 
 .dashboard {
