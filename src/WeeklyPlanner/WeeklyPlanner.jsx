@@ -259,7 +259,7 @@ function WeeklyPlanner() {
                                             <ul>
                                                {workout.sets.map((set, i) => (
                                                 <li key={i} className={styles.setItem}>
-                                                    Set {i+1}: {set.weight} kg x {set.weight} reps
+                                                    Set {i+1}: {set.weight} kg x {set.reps} reps
                                                 </li>
                                                ))} 
                                             </ul>

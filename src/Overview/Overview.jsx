@@ -5,6 +5,7 @@ import styles from './Overview.module.css';
 function Overview() {
     const [activeItem, setActiveItem] = useState('Dashboard');
     const [calories, setCalories] = useState(0);
+    const [workouts, setWorkouts] = useState([]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -145,7 +146,7 @@ function Overview() {
                     </div>
 
                     <div className={styles.weeklyPlannerDashboard}>
-                        
+                        <div className={styles.weeklyWorkoutsTitle}>Your Workouts:</div>
                     </div>
                 </div>
             </div>
