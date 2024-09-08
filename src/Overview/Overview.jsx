@@ -5,7 +5,10 @@ import styles from './Overview.module.css';
 function Overview() {
     const [activeItem, setActiveItem] = useState('Dashboard');
     const [calories, setCalories] = useState(0);
-    const [workouts, setWorkouts] = useState([]);
+    const [workouts, setWorkouts] = useState([{workoutType : "Upper",
+                                                date : "2024-08-27",}, 
+                                            {workoutType : "Lower",
+                                                date : "2024-08-27"}]);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -147,6 +150,16 @@ function Overview() {
 
                     <div className={styles.weeklyPlannerDashboard}>
                         <div className={styles.weeklyWorkoutsTitle}>Your Workouts:</div>
+                        <div className={styles.weeklyWorkouts}>
+                            {workouts.map((workouts, index) => (
+                                <ul key={index} className={styles.workoutList}>
+                                    <div className={styles.workout}>
+                                        <div className={styles.dayType}>{workouts.workoutType}</div>
+                                        <div className={styles.workoutDate}>{workouts.date}</div>
+                                    </div>
+                                </ul>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

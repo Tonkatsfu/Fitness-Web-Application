@@ -392,6 +392,31 @@ svg{
     text-align: center;
 }
 
+.workoutList{
+    display: flex;
+    flex-direction: column;
+}
+
+.workout{
+    display: flex;
+    flex-direction: column;
+}
+
+.dayType{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.975rem;
+    font-weight: bolder;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.workoutDate{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.975rem;
+    font-weight: bolder;
+    color: #6c7293;
+}
+
 
 
 
